@@ -1,0 +1,36 @@
+.img{
+    position: absolute;/*相对于父容器定位*/
+    height: 900px;
+    width: 1600px;
+    left:160px;
+    z-index: -999;
+}
+
+.controls ul li{
+    float: left;
+    padding: 40px;
+    font-size: 50px;
+    color:white;
+}
+
+.controls{
+    position:absolute;
+    left: 855px;
+    top:760px;
+}
+
+.left{
+    position: absolute;
+    left: 160px;
+    top:400px;
+    width: 100px;
+    height: 100px;
+}
+
+.right{
+    position: absolute;
+    left: 1660px;
+    top:400px;
+    width: 100px;
+    height: 100px;
+}
