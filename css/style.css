@@ -11,12 +11,21 @@
     padding: 40px;
     font-size: 50px;
     color:white;
+    opacity: 0.4;
 }
 
 .controls{
     position:absolute;
     left: 855px;
     top:760px;
+}
+
+.arrow img{
+    opacity: 0.4;
+}
+
+.arrow img:hover{
+    opacity:1.0;
 }
 
 .left{

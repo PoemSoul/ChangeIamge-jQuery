@@ -1,20 +1,20 @@
 $(function(){
     $(".img").fadeOut(0);
     $(".img").eq(0).fadeIn(2000);
-    $(".controls ul li").eq(0).css("color","gray");
+    $(".controls ul li").eq(0).css("opacity","1");
 
-    var interval=setInterval(changeImg,2000);
+    var interval=setInterval(changeImg,5000);
     //当前图片的索引
     
     var img_index=0;
     //实现轮播
     function changeImg(){
         img_index=++img_index % 4;
-        $(".img").fadeOut(800);
-        $(".img").eq(img_index).fadeIn(1600);
+        $(".img").fadeOut(1000);
+        $(".img").eq(img_index).fadeIn(2000);
         // $(".controls ul li").css("color","white");
-        $(".controls ul li").eq(img_index).css("color","gray");
-        $(".controls ul li").eq(img_index).siblings().css("color","white");
+        $(".controls ul li").eq(img_index).css("opacity","1");
+        $(".controls ul li").eq(img_index).siblings().css("opacity","0.4");
         
     }
 
@@ -32,8 +32,8 @@ $(function(){
         img_index=$(this).index();
         $(".img").fadeOut(1000);
         $(".img").eq(img_index).fadeIn(2000);
-        $(".controls ul li").eq(img_index).css("color","gray");
-        $(".controls ul li").eq(img_index).siblings().css("color","white");
+        $(".controls ul li").eq(img_index).css("opacity","1");
+        $(".controls ul li").eq(img_index).siblings().css("opacity","0.4");
         interval=setInterval(changeImg,5000);
     })
 
@@ -45,8 +45,8 @@ $(function(){
         }
         $(".img").fadeOut(1000);
         $(".img").eq(img_index).fadeIn(2000);
-        $(".controls ul li").eq(img_index).css("color","gray");
-        $(".controls ul li").eq(img_index).siblings().css("color","white");
+        $(".controls ul li").eq(img_index).css("opacity","1");
+        $(".controls ul li").eq(img_index).siblings().css("opacity","0.4");
         interval=setInterval(changeImg,5000);
     })
 
@@ -55,8 +55,8 @@ $(function(){
         img_index=++img_index % 4;
         $(".img").fadeOut(1000);
         $(".img").eq(img_index).fadeIn(2000);
-        $(".controls ul li").eq(img_index).css("color","gray");
-        $(".controls ul li").eq(img_index).siblings().css("color","white");
+        $(".controls ul li").eq(img_index).css("opacity","1");
+        $(".controls ul li").eq(img_index).siblings().css("opacity","0.4");
         interval=setInterval(changeImg,5000);
     })
 })
