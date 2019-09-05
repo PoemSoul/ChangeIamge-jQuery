@@ -8,13 +8,17 @@ $(function(){
     
     var img_index=0;
     //实现轮播
-    function changeImg(){
-        img_index=++img_index % 4;
+
+    function action(){
         $(".img").fadeOut(1000);
         $(".img").eq(img_index).fadeIn(2000);
-        // $(".controls ul li").css("color","white");
         $(".controls ul li").eq(img_index).css("opacity","1");
         $(".controls ul li").eq(img_index).siblings().css("opacity","0.4");
+    }
+    
+    function changeImg(){
+        img_index=++img_index % 4;
+        action();
         
     }
 
@@ -30,10 +34,7 @@ $(function(){
     $(".controls ul li").click(function(){
         window.clearInterval(interval);
         img_index=$(this).index();
-        $(".img").fadeOut(1000);
-        $(".img").eq(img_index).fadeIn(2000);
-        $(".controls ul li").eq(img_index).css("opacity","1");
-        $(".controls ul li").eq(img_index).siblings().css("opacity","0.4");
+        action();
         interval=setInterval(changeImg,5000);
     })
 
@@ -43,20 +44,14 @@ $(function(){
         if(img_index<0){
             img_index=3;
         }
-        $(".img").fadeOut(1000);
-        $(".img").eq(img_index).fadeIn(2000);
-        $(".controls ul li").eq(img_index).css("opacity","1");
-        $(".controls ul li").eq(img_index).siblings().css("opacity","0.4");
+        action();
         interval=setInterval(changeImg,5000);
     })
 
     $(".right").click(function(){
         window.clearInterval(interval);
         img_index=++img_index % 4;
-        $(".img").fadeOut(1000);
-        $(".img").eq(img_index).fadeIn(2000);
-        $(".controls ul li").eq(img_index).css("opacity","1");
-        $(".controls ul li").eq(img_index).siblings().css("opacity","0.4");
+        action();
         interval=setInterval(changeImg,5000);
     })
 })
